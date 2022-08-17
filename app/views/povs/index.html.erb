@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Povs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Publication year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @povs.each do |pov| %>
+      <tr>
+        <td><%= pov.title %></td>
+        <td><%= pov.author %></td>
+        <td><%= pov.publication_year %></td>
+        <td><%= link_to 'Show', pov %></td>
+        <td><%= link_to 'Edit', edit_pov_path(pov) %></td>
+        <td><%= link_to 'Destroy', pov, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pov', new_pov_path %>

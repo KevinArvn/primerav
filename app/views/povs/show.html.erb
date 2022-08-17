@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pov.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @pov.author %>
+</p>
+
+<p>
+  <strong>Publication year:</strong>
+  <%= @pov.publication_year %>
+</p>
+
+<%= link_to 'Edit', edit_pov_path(@pov) %> |
+<%= link_to 'Back', povs_path %>

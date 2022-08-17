@@ -1,0 +1,2 @@
+class Pov < ApplicationRecord
+end
